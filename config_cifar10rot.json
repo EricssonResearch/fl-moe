@@ -1,0 +1,70 @@
+{
+    "experiment": {
+        "name":"cifar10rot_ifca_tune_fri",
+        "gpu": 0,
+        "runs": 1,
+        "filename": "results_clusters",
+        "flags": {
+            "overlap": true,
+            "finetuning": false,
+            "train_gate_only": false,
+            "train_local": true,
+            "ensembles": true,
+            "tensorboard": false
+        }
+    },
+    "data": {
+        "dataset": "cifar10rot",
+        "n_data": -1,
+        "n_data_test": -1,
+        "num_classes": 10,
+        "opt": 0,
+        "p": -1,
+        "train_frac": 0.5
+    },
+    "model": {
+        "model": "ifca"
+    },
+   "federated": {
+        "epochs": 600,
+        "clusters": 1,
+        "explore_strategy": "eps_decay_k",
+        "num_clients": 200,
+        "lr": 0.0006069188043400187,
+        "frac": 0.1,
+        "eps": 0.801009248658856,
+        "local_bs": 50,
+        "local_ep": 5,
+        "fldropout": 0.5676668348185493,
+        "fl_weight_decay": 0.009176527807121826,
+        "flhiddenunits1": 384,
+        "flhiddenunits2": 194,
+        "flfilters1": 64,
+        "flfilters2": 64
+    },
+    "finetuning": {
+        "ft_lr": 1e-4,
+        "ft_weight_decay": 1e-4
+    },
+    "local": {
+        "loc_epochs": 100,
+        "local_lr": 0.0001809645540687107,
+        "local_weight_decay": 0.0003796869802196879,
+        "localdropout": 0.6490278643426235,
+        "localhiddenunits1": 384,
+        "localhiddenunits2": 194,
+        "localfilters1": 64,
+        "localfilters2": 64
+    },
+    "moe": {
+        "moe_epochs": 200,
+        "moe_lr": 0.000012737906020551508,
+        "gatedropout": 0.7523045562218462,
+        "gatehiddenunits1": 512,
+        "gatehiddenunits2": 256,
+        "gatefilters1": 64,
+        "gatefilters2": 16,
+        "gate_weight_decay": 0.034194180471245
+    }
+}
+

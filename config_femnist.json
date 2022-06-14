@@ -1,0 +1,69 @@
+{
+    "experiment": {
+        "name":"femnist_K20_C1_tuned_4",
+        "gpu": 0,
+        "runs": 1,
+        "filename": "results_clusters",
+        "flags": {
+            "overlap": true,
+            "finetuning": false,
+            "train_gate_only": true,
+            "train_local": true,
+            "ensembles": true,
+            "tensorboard": false
+        }
+    },
+    "data": {
+        "dataset": "femnist",
+        "n_data": 100,
+        "n_data_test": 100,
+        "num_classes": 62,
+        "channels": 1,
+        "opt": 0,
+        "p": 0.6,
+        "train_frac": 0.5
+    },
+    "model": {
+        "model": "leaf"
+    },
+   "federated": {
+        "epochs": 4000,
+        "clusters": 2,
+        "explore_strategy": "eps",
+        "num_clients": 182,
+        "lr": 0.07238968718868155,
+        "frac": 0.03,
+        "local_bs": 10,
+        "local_ep": 3,
+        "fldropout": 0.6593477068392445,
+        "flhiddenunits1": 2048,
+        "flfilters1": 32,
+        "flfilters2": 64,
+        "fl_weight_decay": 0.0007272861729892415,
+        "eps": 0.06152761790973882
+    },
+    "finetuning": {
+        "ft_lr": 1e-4,
+        "ft_weight_decay": 1e-4
+    },
+    "local": {
+        "loc_epochs": 200,
+        "local_lr": 0.001673163418490268,
+        "local_weight_decay": 0.01462252119292826,
+        "localdropout": 0.4882785032968777,
+        "localhiddenunits1": 2048,
+        "localfilters1": 32,
+        "localfilters2": 64
+    },
+    "moe": {
+        "moe_epochs": 200,
+        "moe_lr": 0.0030703628547690274,
+        "gatedropout": 0.2752584945004701,
+        "gatehiddenunits1": 256,
+        "gatehiddenunits2": 1024,
+        "gatefilters1": 64,
+        "gatefilters2": 16,
+        "gate_weight_decay": 0.02687852717705916
+    }
+}
+

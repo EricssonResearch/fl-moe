@@ -1,0 +1,26 @@
+{
+    "model": "cnn",
+    "dataset": "cifar100",
+    "n_data": 100,
+    "lr": 3e-4,
+    "ft_lr": 3e-4,
+    "local_lr": 3e-4,
+    "moe_lr": 1e-5,
+    "num_clients": 50,
+    "num_classes": 100,
+    "epochs": 1500,
+    "loc_epochs": 200,
+    "train_frac": 0.2,
+    "local_ep": 3,
+    "opt": 0 ,
+    "p": 0.5,
+    "gpu": 0 ,
+    "runs": 3,
+    "frac": 0.1,
+    "flags": {
+        "overlap": false,
+        "finetuning": false,
+        "train_gate_only": false,
+        "ensembles": false
+    }
+}

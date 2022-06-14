@@ -1,0 +1,68 @@
+{
+    "experiment": {
+        "name":"cifar10_K20_C1_tuned",
+        "gpu": 0,
+        "runs": 1,
+        "filename": "results_clusters",
+        "flags": {
+            "overlap": true,
+            "finetuning": false,
+            "train_gate_only": false,
+            "train_local": true,
+            "ensembles": true,
+            "tensorboard": false
+        }
+    },
+    "data": {
+        "dataset": "cifar10",
+        "n_data": 500,
+        "n_data_test": 100,
+        "num_classes": 10,
+        "opt": 0,
+        "p": 0.2,
+        "train_frac": 0.5
+    },
+    "model": {
+        "model": "leaf"
+    },
+   "federated": {
+        "epochs": 100,
+        "clusters": 2,
+        "explore_strategy": "eps",
+        "num_clients": 20,
+        "lr": 0.0869440470648931,
+        "frac": 1.0,
+        "local_bs": 10,
+        "local_ep": 3,
+        "fldropout": 0.4163572204706245,
+        "flhiddenunits1": 512,
+        "flfilters1": 32,
+        "flfilters2": 64,
+        "fl_weight_decay": 0.0002557773556451872,
+        "eps": 0.23254219945701154
+    },
+    "finetuning": {
+        "ft_lr": 1e-4,
+        "ft_weight_decay": 1e-4
+    },
+    "local": {
+        "loc_epochs": 200,
+        "local_lr": 0.0011240040859781546,
+        "local_weight_decay": 0.013612994981628875,
+        "localdropout": 0.5069636746579309,
+        "localhiddenunits1": 512,
+        "localfilters1": 64,
+        "localfilters2": 64
+    },
+    "moe": {
+        "moe_epochs": 200,
+        "moe_lr": 0.00029116681140279395,
+        "gatedropout": 0.702904178228859,
+        "gatehiddenunits1": 128,
+        "gatehiddenunits2": 128,
+        "gatefilters1": 32,
+        "gatefilters2": 16,
+        "gate_weight_decay": 0.0004935538567704446
+    }
+}
+
